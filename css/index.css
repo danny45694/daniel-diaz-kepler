@@ -32,3 +32,10 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+
+#expList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-weight: bold;
+}
