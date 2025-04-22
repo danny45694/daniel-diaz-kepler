@@ -8,6 +8,15 @@ body {
     padding: 10px;
 }
 
+.header {
+    position: sticky;
+    top: 0;
+    background-color: lightblue;
+    z-index: 1000;
+    padding: 10px;
+    color: black;
+}
+
 .h {
     font-size: 75px;
     font-weight: bold;
@@ -33,7 +42,7 @@ body {
     justify-content: space-between;
 }
 
-#expList {
+.jobEntry {
     color: black;
     font-size: 20px;
     display: flex;
@@ -42,10 +51,9 @@ body {
     font-weight: bold;
     border: 2px solid black;
     padding: 30px;
-    background-color: lightblue;
 }
 
-.line {
+.jobHeader {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -56,3 +64,10 @@ body {
     background-color: white;
     color: black;
 }
+
+.jobHeader {
+    display: flex;               
+    justify-content: space-between; 
+    align-items: baseline;       
+  }
+  
