@@ -23,6 +23,12 @@ body {
     color: white;
 }
 
+#experience {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
 .h2 {
 
     justify-content: space-between;
@@ -71,3 +77,9 @@ body {
     align-items: baseline;       
   }
   
+#links {
+    display: flex;  
+    flex-direction: row;             
+    justify-content: space-between; 
+    align-items: baseline;       
+  }
