@@ -83,3 +83,10 @@ body {
     justify-content: space-between; 
     align-items: baseline;       
   }
+
+  #connect {
+    display: flex;  
+    flex-direction: row;             
+    justify-content: space-between; 
+    align-items: baseline;       
+  }
