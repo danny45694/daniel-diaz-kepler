@@ -1,77 +1,12 @@
-/* Mobile First CSS */
-
- 
+/* ----------------- */
+/* Base Styles       */
+/* ----------------- */
 
 body {
     height: 100vh;
     width: 100%;
     color: rgb(235, 232, 232);
     padding: 10px;
-}
-
-/*Mobile Styles*/
-@media (min-width: 320px) {
-    body {
-        background: linear-gradient(#e66465, #9198e5);
-        padding: 10px;
-        text-align: center;
-    }
-
-    .h {
-        font-size: 50px;
-        font-weight: bold;
-        color: white;
-    }
-    .jobDesc {
-        color: white;
-        font-size: 20px;
-    }
-    .header {
-        position: sticky;
-        background-color: white;
-    }
-    ul {
-        display: flex;
-        flex-direction: column;
-        list-style-type: none;
-        margin: 15px;
-        padding: 5px;
-    }
-
-}
-
-/*  Desktop Styles */
-/* 768px and up */
-@media (min-width: 768px) {
-    body {
-        background-image: url("/img/background.png");
-        padding: 10px;
-        background-size: 100% auto;
-    }
-
-    .h {
-        font-size: 100px;
-        font-weight: bold;
-        color: white;
-    }
-    .jobDesc {
-        color: white;
-        font-size: 20px;
-    }
-    .header {
-        position: sticky;
-        background-color: cyan;
-        font-size: 18px;
-        font-weight: bold;
-    }
-    ul {
-        display: flex;
-        flex-direction: row;
-        list-style-type: none;
-        margin: 15px;
-        padding: 5px;
-        justify-content: space-between;
-    }
 }
 
 .header {
@@ -81,7 +16,6 @@ body {
     padding: 10px;
     color: black;
 }
-
 
 .h {
     font-size: 75px;
@@ -93,30 +27,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-  }
-  
-  .jobEntry {
-    display: flex;
-    justify-content: space-between;
-  }
-
-.about {
-
-    justify-content: space-between;
-    font-size: 45px;
-    font-weight: normal;
-    color: lightskyblue
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-}
-
-.subContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .jobEntry {
@@ -133,31 +43,83 @@ body {
 .jobHeader {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: baseline;
+    margin-bottom: 15px;
     border: 2px solid darkblue;
     border-radius: 5px;
     padding: 15px;
-    margin-bottom: 15px;
     background-color: white;
     color: black;
 }
 
-.jobHeader {
-    display: flex;               
-    justify-content: space-between; 
-    align-items: baseline;       
-  }
-  
-#links {
-    display: flex;  
-    flex-direction: row;             
-    justify-content: space-between; 
-    align-items: baseline;       
-  }
+.about {
+    justify-content: space-between;
+    font-size: 45px;
+    font-weight: normal;
+    color: lightskyblue;
+}
 
-  #connect {
-    display: flex;  
-    flex-direction: row;             
-    justify-content: space-between; 
-    align-items: baseline;       
-  }
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.subContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#links, #connect {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+/* ----------------- */
+/* Mobile Styles (min-width: 320px and up) */
+/* ----------------- */
+@media (min-width: 320px) {
+    body {
+        background: linear-gradient(#e66465, #9198e5);
+        text-align: center;
+    }
+
+    .h {
+        font-size: 50px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .jobDesc {
+        color: white;
+        font-size: 20px;
+    }
+
+    .header {
+        background-color: white;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        margin: 15px;
+        padding: 5px;
+    }
+}
+
+/* ----------------- */
+/* Tablet/Desktop Styles (min-width: 1080px and up) */
+/* ----------------- */
+@media (min-width: 1080px) {
+    body {
+        background-image: url("/img/background.png");
+        background-size: 100% auto;
+    }
+
+    .h {
+        font-size: 100px;
+        font-weight: bold;
+        color: white;
