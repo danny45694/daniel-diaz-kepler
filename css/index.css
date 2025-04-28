@@ -1,4 +1,4 @@
-/* Desktop First CSS */
+/* Mobile First CSS */
 
  
 
@@ -9,6 +9,7 @@ body {
     padding: 10px;
 }
 
+/*Mobile Styles*/
 @media (min-width: 320px) {
     body {
         background: linear-gradient(#e66465, #9198e5);
@@ -39,7 +40,9 @@ body {
 
 }
 
-@media (min-width: 1080px) {
+/*  Desktop Styles */
+/* 768px and up */
+@media (min-width: 768px) {
     body {
         background-image: url("/img/background.png");
         padding: 10px;
