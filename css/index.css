@@ -1,21 +1,84 @@
+/* Desktop First CSS */
 
+ 
 
 body {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(#e66465, #9198e5);
     color: rgb(235, 232, 232);
     padding: 10px;
+}
+
+@media (min-width: 320px) {
+    body {
+        background: linear-gradient(#e66465, #9198e5);
+        padding: 10px;
+        text-align: center;
+    }
+
+    .h {
+        font-size: 50px;
+        font-weight: bold;
+        color: white;
+    }
+    .jobDesc {
+        color: white;
+        font-size: 20px;
+    }
+    .header {
+        position: sticky;
+        background-color: white;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        margin: 15px;
+        padding: 5px;
+    }
+
+}
+
+@media (min-width: 1080px) {
+    body {
+        background-image: url("/img/background.png");
+        padding: 10px;
+        background-size: 100% auto;
+    }
+
+    .h {
+        font-size: 100px;
+        font-weight: bold;
+        color: white;
+    }
+    .jobDesc {
+        color: white;
+        font-size: 20px;
+    }
+    .header {
+        position: sticky;
+        background-color: cyan;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin: 15px;
+        padding: 5px;
+        justify-content: space-between;
+    }
 }
 
 .header {
     position: sticky;
     top: 0;
-    background-color: lightblue;
     z-index: 1000;
     padding: 10px;
     color: black;
 }
+
 
 .h {
     font-size: 75px;
