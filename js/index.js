@@ -14,3 +14,13 @@ copyright.innerHTML = `Daniel Diaz ${thisYear} '&copy'`;
 footer.appendChild("copyright")
 
 body.appendChild("footer");
+
+let skills = ["Javascript", "HTML", "CSS", "GitHub"]
+let skillsSection = document.querySelector("skills");
+let skillsList = document.querySelector("skillsSection");
+
+for(i = 0; i < skills.length; i++) {
+    let skill = document.createElement("li");
+    skill.innerText = skills[i];
+    skillsList.appendChild("skill");
+}
