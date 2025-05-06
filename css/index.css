@@ -125,3 +125,8 @@ body {
         color: white;
     }
 }
+
+.skills ul {
+    display: flex;
+    flex-direction: column;
+}
