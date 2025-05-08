@@ -125,3 +125,13 @@ body {
         color: white;
     }
 }
+
+#skills > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 3px;
+    padding: 12px;
+}
