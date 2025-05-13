@@ -25,19 +25,32 @@ document.addEventListener('DOMContentLoaded', function() {
     skillsList.appendChild(skill);
     }
 
-    const messageForm = document.querySelector('leaveMessage');
-
-    console.log(messageForm);
+    const messageForm = document.querySelector('#leaveMessage');
 
     messageForm.addEventListener("submit", function (event) {
     console.log(event);
     let usersName = document.querySelector('input[name="usersName"]');
     let usersEmail = document.querySelector('input[name="usersEmail"]');
-    let usersMessage = document.querySelector('input[name="usersMessage"]');
+    let usersMessage = document.querySelector('textarea[name="usersMessage"]');
     console.log(usersName)
     console.log(usersEmail)
     console.log(usersMessage)
     event.preventDefault();
+
+    const messageSection = document.querySelector("#messages")
+    const messageList = messageSection.querySelector("ul");
+    let newMessage = document.createElement("li");
+    newMessage.innerHTML = <a href="mailto:`${usersEmail}`">`${usersName}`</a> + 
+    <span>`${usersMessage}`</span>;
+    const removeButton = document.createElement("button");
+    removeButton.innerText = "remove"
+    removeButton.type = "button";
+    removeButton.addEventListener("click", function() {
+     // const entry = 
+    })
+
+
+    messageForm.reset();
     })
 
   });
