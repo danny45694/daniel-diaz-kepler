@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let usersName = document.querySelector('input[name="usersName"]');
     let usersEmail = document.querySelector('input[name="usersEmail"]');
     let usersMessage = document.querySelector('textarea[name="usersMessage"]');
-    console.log(usersName)
-    console.log(usersEmail)
-    console.log(usersMessage)
+    console.log(usersName.value)
+    console.log(usersEmail.value)
+    console.log(usersMessage.value)
     event.preventDefault();
 
     const messageSection = document.querySelector("#messages")
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let newMessage = document.createElement("li");
     
     const removeButton = document.createElement("button");
-    newMessage.innerHTML = `<a href="mailto:${usersEmail}">${usersName}</a> <span>${usersMessage}</span>`
+    newMessage.innerHTML = `<a href="mailto:${usersEmail.value}">${usersName.value} </a>  <span>${usersMessage.value}</span>`
     removeButton.innerText = "remove"
     removeButton.type = "button";
     

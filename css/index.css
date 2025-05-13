@@ -135,3 +135,8 @@ body {
     margin: 3px;
     padding: 12px;
 }
+
+#leaveMessage {
+    justify-content: space-between;
+    margin: 20px;
+}
