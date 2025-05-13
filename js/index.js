@@ -40,19 +40,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const messageSection = document.querySelector("#messages")
     const messageList = messageSection.querySelector("ul");
     let newMessage = document.createElement("li");
-    newMessage.innerHTML = <a href="mailto:`${usersEmail}`">`${usersName}`</a> + 
-    <span>`${usersMessage}`</span>;
+    
     const removeButton = document.createElement("button");
+    newMessage.innerHTML = `<a href="mailto:${usersEmail}">${usersName}</a> <span>${usersMessage}</span>`
     removeButton.innerText = "remove"
     removeButton.type = "button";
+    
     removeButton.addEventListener("click", function() {
-     // const entry = 
+      const entry = removeButton.parentNode;
+      entry.remove();
+      
     })
-
-
     messageForm.reset();
-    })
-
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+    
   });
 
-
+});
