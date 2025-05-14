@@ -25,13 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
     skillsList.appendChild(skill);
     }
 
-    const messageForm = document.querySelector('#leaveMessage');
+    const messageForm = document.querySelector('form[name="leave_message"]');
+
 
     messageForm.addEventListener("submit", function (event) {
-    console.log(event);
-    let usersName = document.querySelector('input[name="usersName"]');
-    let usersEmail = document.querySelector('input[name="usersEmail"]');
-    let usersMessage = document.querySelector('textarea[name="usersMessage"]');
+    let usersName = document.getElementById("usersName");
+    let usersEmail = document.getElementById("usersEmail");
+    let usersMessage = document.getElementById("usersMessage");
+
     console.log(usersName.value)
     console.log(usersEmail.value)
     console.log(usersMessage.value)
