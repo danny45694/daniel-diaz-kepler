@@ -77,6 +77,18 @@ body {
     align-items: baseline;
 }
 
+#skills > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 3px;
+    padding: 12px;
+}
+
+
+
 /* ----------------- */
 /* Mobile Styles (min-width: 320px and up) */
 /* ----------------- */
@@ -108,6 +120,28 @@ body {
         margin: 15px;
         padding: 5px;
     }
+
+    #leaveMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 500px;
+    width: 100%;
+    }
+
+    #leaveMessage input,
+    #leaveMessage textarea,
+    #leaveMessage button {
+        font-size: 16px;          
+        padding: 12px;            
+        width: 100%;             
+        box-sizing: border-box;   
+}
+
+    
 }
 
 /* ----------------- */
@@ -124,19 +158,11 @@ body {
         font-weight: bold;
         color: white;
     }
+    #leaveMessage {
+    justify-content: center;
+    max-width: 500px;
+    width: 100%;
+    align-items: center;
+}
 }
 
-#skills > ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 3px;
-    padding: 12px;
-}
-
-#leaveMessage {
-    justify-content: space-between;
-    margin: 20px;
-}

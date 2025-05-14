@@ -42,9 +42,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let newMessage = document.createElement("li");
     
     const removeButton = document.createElement("button");
-    newMessage.innerHTML = `<a href="mailto:${usersEmail.value}">${usersName.value} </a>  <span>${usersMessage.value}</span>`
+    newMessage.innerHTML = `<a href="mailto:${usersEmail.value}">${usersName.value}</a> &nbsp; <span>${usersMessage.value}</span>`
     removeButton.innerText = "remove"
     removeButton.type = "button";
+    removeButton.style.marginLeft = "10px"; // Css spacing
     
     removeButton.addEventListener("click", function() {
       const entry = removeButton.parentNode;
