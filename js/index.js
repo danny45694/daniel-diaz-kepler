@@ -56,6 +56,17 @@ document.addEventListener('DOMContentLoaded', function() {
     messageForm.reset();
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
+
+    fetch('https://api.github.com/users/danny45694/repos')
+      .then(function(response) {
+        return response.json()
+      })
+      .then(function(response) {
+        const repositories = JSON.parse(this.response)
+      })
+      .catch(function(err) {
+        //Error Code
+      });
     
   });
 
