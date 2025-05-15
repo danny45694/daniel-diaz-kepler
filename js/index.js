@@ -25,6 +25,38 @@ document.addEventListener('DOMContentLoaded', function() {
     skillsList.appendChild(skill);
     }
 
+    const messageForm = document.querySelector('form[name="leave_message"]');
+
+
+    messageForm.addEventListener("submit", function (event) {
+    let usersName = document.getElementById("usersName");
+    let usersEmail = document.getElementById("usersEmail");
+    let usersMessage = document.getElementById("usersMessage");
+
+    console.log(usersName.value)
+    console.log(usersEmail.value)
+    console.log(usersMessage.value)
+    event.preventDefault();
+
+    const messageSection = document.querySelector("#messages")
+    const messageList = messageSection.querySelector("ul");
+    let newMessage = document.createElement("li");
+    
+    const removeButton = document.createElement("button");
+    newMessage.innerHTML = `<a href="mailto:${usersEmail.value}">${usersName.value}</a> &nbsp; <span>${usersMessage.value}</span>`
+    removeButton.innerText = "remove"
+    removeButton.type = "button";
+    removeButton.style.marginLeft = "10px"; // Css spacing
+    
+    removeButton.addEventListener("click", function() {
+      const entry = removeButton.parentNode;
+      entry.remove();
+      
+    })
+    messageForm.reset();
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+    
   });
 
-
+});
