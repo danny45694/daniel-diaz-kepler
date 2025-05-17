@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function() {
     let body = document.body;
     let footerElement = document.createElement("footer");
@@ -25,19 +23,19 @@ document.addEventListener('DOMContentLoaded', function() {
     skillsList.appendChild(skill);
     }
 
-    const messageForm = document.querySelector('leaveMessage');
+    const messageForm = document.querySelector('#leaveMessage');
 
     console.log(messageForm);
 
     messageForm.addEventListener("submit", function (event) {
-    console.log(event);
     let usersName = document.querySelector('input[name="usersName"]');
     let usersEmail = document.querySelector('input[name="usersEmail"]');
-    let usersMessage = document.querySelector('input[name="usersMessage"]');
-    console.log(usersName)
-    console.log(usersEmail)
-    console.log(usersMessage)
+    // let usersMessage = document.querySelector('input[name="usersMessage"])'
+    console.log(usersName);
+    console.log(usersEmail);
+    // console.log(usersMessage);
     event.preventDefault();
+
     })
 
   });
