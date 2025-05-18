@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function() {
     let body = document.body;
     let footerElement = document.createElement("footer");
@@ -56,28 +54,26 @@ document.addEventListener('DOMContentLoaded', function() {
     messageForm.reset();
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
-    
-
 
     // repush to git
 
 
-    fetch('https://api.github.com/users/danny45694/repos')
-      .then(response =>  response.json())
-      .then(repositories => {console.log(repositories);
-        for(let i = 0; i < repositories.length; i++) {
-          let project = document.createElement("li");
-          project.innertext = repositories[i];
-          projectList.appendChild(project);
-        }
 
-        
+  });
+     fetch('https://api.github.com/users/danny45694/repos')
+      .then(response =>  response.json())
+      .then(repositories => {
+        for(let i = 0; i < repositories.length; i++) {
+        let project = document.createElement("li");
+        project.innerText = repositories[i].name;
+        projectList.appendChild(project);
+      };
       })
       .catch(error => console.error(error));
 
       let projectSection = document.querySelector("#projects");
-      let projectList = document.querySelector(projectSection);
+      let projectList = projectSection.querySelector("ul");
 
-  });
+
 
 });
