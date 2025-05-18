@@ -65,13 +65,18 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('https://api.github.com/users/danny45694/repos')
       .then(response =>  response.json())
       .then(repositories => {console.log(repositories);
+        for(let i = 0; i < repositories.length; i++) {
+          let project = document.createElement("li");
+          project.innertext = repositories[i];
+          projectList.appendChild(project);
+        }
+
+        
       })
-      .then(data => console.log(data))
       .catch(error => console.error(error));
 
       let projectSection = document.querySelector("#projects");
       let projectList = document.querySelector(projectSection);
-      
 
   });
 
