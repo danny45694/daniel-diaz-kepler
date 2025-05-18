@@ -60,6 +60,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // repush to git
+
+
+    fetch('https://api.github.com/users/danny45694/repos')
+      .then(response =>  response.json())
+      .then(repositories => {console.log(repositories);
+      })
+      .then(data => console.log(data))
+      .catch(error => console.error(error));
+
+      let projectSection = document.querySelector("#projects");
+      let projectList = document.querySelector(projectSection);
+      
+
   });
 
 });
