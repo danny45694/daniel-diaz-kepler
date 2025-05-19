@@ -87,6 +87,15 @@ body {
     padding: 12px;
 }
 
+#projects > ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: column;
+    gap: 1rem;
+    padding: 50px;
+    list-style-type: none;
+    font-size: 25px;
+}
 
 
 /* ----------------- */
