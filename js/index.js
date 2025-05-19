@@ -60,6 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   });
+
+  let projectSection = document.querySelector("#projects");
+  let projectList = projectSection.querySelector("ul");
+
      fetch('https://api.github.com/users/danny45694/repos')
       .then(response =>  response.json())
       .then(repositories => {
@@ -69,10 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
         projectList.appendChild(project);
       };
       })
-      .catch(error => console.error(error));
+      .catch(error => console.error("An error occurred:", error));
 
-      let projectSection = document.querySelector("#projects");
-      let projectList = projectSection.querySelector("ul");
+
 
 
 
